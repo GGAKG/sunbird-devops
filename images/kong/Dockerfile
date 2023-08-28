@@ -1,4 +1,4 @@
-FROM kong:0.14.1-centos
+FROM kong:2.8.3-alpine
 
 ENV KONG_VERSION 0.14.1
 
