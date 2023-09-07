@@ -27,7 +27,7 @@ config:
   # Use an existing config map (see configmap.yaml for required fields)
   # Example:
   # existingConfig: config
-  alphaConfigFile: {}
+  # alphaConfigFile: {}
 
 image:
   repository: "quay.io/oauth2-proxy/oauth2-proxy"
