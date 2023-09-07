@@ -7,7 +7,7 @@
     version: "{{ ml_analytics_version }}"
     depth: "1"
     force: yes
-    ignore_errors: true
+  ignore_errors: true
 
 - name: CREATE THE USER
   user:
