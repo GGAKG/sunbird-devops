@@ -9,7 +9,7 @@ config:
   # Use an existing secret for OAuth2 credentials (see secret.yaml for required fields)
   # Example:
   # existingSecret: secret
-  cookieSecret: "XXXXXXXXXX"
+  cookieSecret: "bT/Af5vi3mQY+lajNif6mGjkd3Hb5s51SuJ4mN4v63A="
   google: {}
     # adminEmail: xxxx
     # serviceAccountJson: xxxx
