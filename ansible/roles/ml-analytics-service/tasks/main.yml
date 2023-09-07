@@ -2,7 +2,7 @@
 # tasks file for data-pipeline
 - name: Git checkout
   git:
-    repo: 'https://github.com/Sunbird-Ed/ml-analytics-service.git'
+    repo: 'https://github.com/GGAKG/ml-analytics-service.git'
     dest: "{{ BASEPATH }}/ml-analytics-service"
     version: "{{ ml_analytics_version }}"
     depth: "1"
