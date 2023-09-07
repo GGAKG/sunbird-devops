@@ -1,6 +1,6 @@
 ---
 # tasks file for data-pipeline
-shell: "rm -rf {{ BASEPATH }}/ml-analytics-service"
+
 - name: Git checkout
   git:
     repo: 'https://github.com/GGAKG/ml-analytics-service.git'
