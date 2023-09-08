@@ -1,8 +1,7 @@
 config:
-  providers:
-    clientID: "XXXXXX"
+  clientID: "XXXXXX"
   # OAuth client secret
-    clientSecret: "XXXXXXXXXXX"
+  clientSecret: "XXXXXXXXXXX"
   cookieSecret: "{{ cookie_secret }}"
   configFile: |-
 {% if (not graylog_open_to_public) and send_logs_to_graylog and graylog_open_to_private %}
