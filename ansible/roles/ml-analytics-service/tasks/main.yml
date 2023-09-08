@@ -48,7 +48,7 @@
   become: true
   
 - name: Install python virtual environment
-  shell: "cd {{ WORKDIR }} && virtualenv --python=python3.7 spark_venv"
+  shell: "cd {{ WORKDIR }} && virtualenv --python=python3.9 spark_venv"
   become: true
 
 - name: Create necessary logs folders for pipeline
@@ -69,7 +69,7 @@
 - name: Install packages from requirement.txt
   pip:
     virtualenv: "{{WORKDIR }}/spark_venv"
-    virtualenv_python: python3.7
+    virtualenv_python: python3.9
     requirements: "{{ WORKDIR }}/ml-analytics-service/requirements.txt"
     extra_args: --upgrade
 
