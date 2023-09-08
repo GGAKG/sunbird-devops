@@ -67,7 +67,7 @@
     - "{{ WORKDIR }}/logs/survey/evidence"
 
 - name: Install packages from requirement.txt
-  pip:
+  pip3:
     virtualenv: "{{WORKDIR }}/spark_venv"
     virtualenv_python: python3.10
     requirements: "{{ WORKDIR }}/ml-analytics-service/requirements.txt"
