@@ -23,7 +23,7 @@ config:
     server:
       BindAddress: 0.0.0.0:4180
     providers:
-    - approvalPrompt: force
+    - approval-prompt: force
       clientID: "{{ google_client_id }}"
       clientSecret: "{{ google_client_secret }}"
       id: "google={{ google_client_id }}"
