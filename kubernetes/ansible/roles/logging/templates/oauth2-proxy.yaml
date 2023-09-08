@@ -28,16 +28,16 @@ config:
       id: "google={{ google_client_id }}"
       provider: google
     upstreamConfig:
-      upstreams:
+    - upstreams:
       - flushInterval: 1s
         id: /
         passHostHeader: true
         path: /
         proxyWebSockets: true
 {% if send_logs_to_graylog %}
-      uri: "http://graylog.logging.svc.cluster.local"
+        uri: "http://graylog.logging.svc.cluster.local"
 {% else %}
-      uri: "http://{{ kibana_service }}"
+        uri: "http://{{ kibana_service }}"
 {% endif %}
     injectRequestHeaders:
     - name: X-Forwarded-Groups
