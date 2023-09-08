@@ -1,11 +1,5 @@
 config:
-  provider: "google"
-  clientID: "{{ google_client_id }}"
-  # OAuth client secret
-  clientSecret: "{{ google_client_secret }}"
-  id: "google={{ google_client_id }}"
   cookieSecret: "{{ cookie_secret }}"
-  google: {}
   configFile: |-
 {% if (not graylog_open_to_public) and send_logs_to_graylog and graylog_open_to_private %}
     redirect_url = "http://{{ oauth2_proxy_lb_ip }}.nip.io/oauth2/callback"
@@ -69,7 +63,7 @@ config:
 
 image:
   repository: "quay.io/oauth2-proxy/oauth2-proxy"
-  tag: "v7.1.3"
+  tag: "v7.4.0"
   pullPolicy: "IfNotPresent"
 
 replicaCount: {{ oauth2_replicas | default(1) }}
