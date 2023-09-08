@@ -1,8 +1,9 @@
 config:
   provider: "google"
-   clientID: "{{ google_client_id }}"
+  clientID: "{{ google_client_id }}"
   # OAuth client secret
-   clientSecret: "{{ google_client_secret }}"
+  clientSecret: "{{ google_client_secret }}"
+  id: "google={{ google_client_id }}"
   cookieSecret: "{{ cookie_secret }}"
   google: {}
   configFile: |-
