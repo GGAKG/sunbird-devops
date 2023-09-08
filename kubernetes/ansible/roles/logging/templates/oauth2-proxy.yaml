@@ -19,15 +19,7 @@ config:
     silence_ping_logging = true
     skip_provider_button = true
 
-  alphaConfigFile: |-
-    server:
-      BindAddress: 0.0.0.0:4180
-    providers:
-    - clientID: "{{ google_client_id }}"
-      clientSecret: "{{ google_client_secret }}"
-      id: "google={{ google_client_id }}"
-      provider: google
-    upstreamConfig:
+  upstreamConfig:
     - upstreams:
       - flushInterval: 1s
         id: /
@@ -38,7 +30,16 @@ config:
         uri: "http://graylog.logging.svc.cluster.local"
 {% else %}
         uri: "http://{{ kibana_service }}"
-{% endif %}
+{% endif %} 
+
+  alphaConfigFile: |-
+    server:
+      BindAddress: 0.0.0.0:4180
+    providers:
+    - clientID: "{{ google_client_id }}"
+      clientSecret: "{{ google_client_secret }}"
+      id: "google={{ google_client_id }}"
+      provider: google
     injectRequestHeaders:
     - name: X-Forwarded-Groups
       values:
