@@ -27,7 +27,7 @@ config:
       clientSecret: "{{ google_client_secret }}"
       id: "google={{ google_client_id }}"
       provider: google
-    upstreams:
+    upstream:
     - flushInterval: 1s
       id: /
       passHostHeader: true
