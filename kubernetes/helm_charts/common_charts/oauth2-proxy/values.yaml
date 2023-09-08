@@ -1,7 +1,6 @@
 # Oauth client configuration specifics
 config:
   # OAuth client ID
-  providers:
     clientID: "66d41cbb7e7d90ba6b1f"
   # OAuth client secret
     clientSecret: "9fda7fb79dd4a96a2fb6757f535b87d77c9824ca"
