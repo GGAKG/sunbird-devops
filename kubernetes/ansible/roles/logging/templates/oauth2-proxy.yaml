@@ -1,4 +1,5 @@
 config:
+  provider: "github"
   clientID: "XXXXXX"
   # OAuth client secret
   clientSecret: "XXXXXXXXXXX"
