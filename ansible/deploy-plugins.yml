@@ -212,7 +212,7 @@
       
         - block:
           - name:  run the s3_copy.sh script
-            shell: "bash content-plugins/setup-hooks.sh {{ source_folder }} {{ cloud_public_storage_accountname }}"
+            shell: "bash setup-hooks.sh {{ source_folder }} {{ cloud_public_storage_accountname }}"
             async: 3600
             poll: 10
             environment:
