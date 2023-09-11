@@ -210,15 +210,15 @@
           tags:
             - preview
       
-        - block:
-          - name:  run the s3_copy.sh script
-            shell: "bash s3_copy.sh {{ cloud_storage_content_bucketname }} {{ cloud_public_storage_accountname }}"
-            async: 3600
-            poll: 10
-            environment:
-              AWS_DEFAULT_REGION: "{{ aws_default_region }}"
-              AWS_ACCESS_KEY_ID: "{{ aws_access_key_id }}"
-              AWS_SECRET_ACCESS_KEY: "{{ aws_secret_access_key }}"
-          tags:
-            - plugins
+        # - block:
+        #   - name:  run the s3_copy.sh script
+        #     shell: "bash s3_copy.sh {{ cloud_storage_content_bucketname }} {{ cloud_public_storage_accountname }}"
+        #     async: 3600
+        #     poll: 10
+        #     environment:
+        #       AWS_DEFAULT_REGION: "{{ aws_default_region }}"
+        #       AWS_ACCESS_KEY_ID: "{{ aws_access_key_id }}"
+        #       AWS_SECRET_ACCESS_KEY: "{{ aws_secret_access_key }}"
+        #   tags:
+        #     - plugins
       when: cloud_service_provider == "aws"
