@@ -18,8 +18,7 @@ config:
 {% endif %}
     silence_ping_logging = true
     skip_provider_button = true
-alphaConfig:
-  configData:
+  alphaConfigFile: |-
     server:
       BindAddress: 0.0.0.0:4180
     providers:
