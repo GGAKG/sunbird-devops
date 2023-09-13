@@ -39,10 +39,10 @@ node() {
                        npm config set strict-ssl false
                        npm install
                        npm install promise
-                       gulp minifyJs # To rename the minified files
+                       #gulp minifyJs # To rename the minified files
                        gulp copystyleImages
                        gulp clean
-                       gulp injectrenamedfiles  # Inject the minified files to index.html
+                       #gulp injectrenamedfiles  # Inject the minified files to index.html
                        gulp package # Package the build
                     """  
                     sh """
