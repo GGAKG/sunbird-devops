@@ -9,7 +9,7 @@ service:
   nginx_public_ingress_ip: {{ nginx_public_ingress_ip }}
   {% endif %}
   ports:
-  - port: 80
+  - port: 90
     name: http
     targetPort: 80
     nodePort: 31380
