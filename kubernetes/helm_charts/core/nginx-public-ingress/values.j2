@@ -1104,6 +1104,7 @@ nginxconfig: |
 
      server {
        listen 9145;
+       server_name {{ domain_name }}; 
        location /metrics {
          content_by_lua_block {
             metric_connections:set(ngx.var.connections_reading, {"reading"})
