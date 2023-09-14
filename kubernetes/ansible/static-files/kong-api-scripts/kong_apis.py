@@ -63,7 +63,7 @@ def _save_plugins_for_api(kong_admin_api_url, input_api_details):
           saved_plugin_id = matching_plugins[0]
           input_plugin["id"] = saved_plugin_id
           json_request("PATCH", api_pugins_url + "/" + saved_plugin["id"], input_plugin)
-        else 
+        else:
           print("No matching plugin found for {}".format(input_plugin["name"]))
 
     for saved_plugin in saved_plugins_to_be_deleted:
