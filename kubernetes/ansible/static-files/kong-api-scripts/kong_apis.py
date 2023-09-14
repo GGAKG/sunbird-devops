@@ -61,7 +61,7 @@ def _save_plugins_for_api(kong_admin_api_url, input_api_details):
         saved_plugin_id = [saved_plugin["id"] for saved_plugin in saved_plugins if saved_plugin["name"] == input_plugin["name"]][0]
         if saved_plugin_id:
           input_plugin["id"] = saved_plugin_id
-          json_request("PATCH", api_pugins_url + "/" + saved_plugin["id"], input_plugin)
+          json_request("PATCH", api_pugins_url + "/" + saved_plugin_id[0], input_plugin)
         else:
           print("No matching plugin found for {}".format(input_plugin["name"]))
 
