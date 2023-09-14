@@ -144,7 +144,7 @@ proxyconfig: |-
       proxy_set_header X-Forwarded-Proto $scheme;
       proxy_set_header Connection "";
       proxy_http_version 1.1;
-      proxy_pass http://keycloak;
+      proxy_pass http://192.168.5.10:8066;
     }
     # Sunbird realm keycloak API endpoints
     location ~ /auth/realms/sunbird/(get-required-action-link|login-actions/(action-token|authenticate|required-action)|protocol/openid-connect/(auth|certs|logout|token|userinfo)|.well-known/openid-configuration) {
@@ -157,7 +157,7 @@ proxyconfig: |-
       proxy_set_header X-Forwarded-Proto $scheme;
       proxy_set_header Connection "";
       proxy_http_version 1.1;
-      proxy_pass http://keycloak;
+      proxy_pass http://192.168.5.10:8066;
     }
     # Static Assets for keycloak endpoints with caching
     location ~ /auth/(resources/(.+\.(png|svg|ico|js|eot|ttf|woff|woff2|css))|welcome-content/(.+\.(png|svg|ico|js|eot|ttf|woff|woff2|css))) {
@@ -181,7 +181,7 @@ proxyconfig: |-
       proxy_send_timeout 60;
       proxy_read_timeout 70;
       proxy_http_version 1.1;
-      proxy_pass http://keycloak;
+      proxy_pass http://192.168.5.10:8066;
     }
     # This is Caching mechanism for POST requests location search
     location ~ /learner/data/v1/location/search {
